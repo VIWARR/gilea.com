@@ -1,0 +1,15 @@
+site_name: GILEA
+site_url: https://gilea.by/
+dev_addr: 127.0.0.1:8200
+
+nav:
+  - HOME: index.md
+  - 'MODELS': offer\models.md
+  - 'TEMPLATES': offer\templates.md
+  - 'URLS': offer\urls.md
+  - 'VIEW': offer\view.md
+  - PIP INSTALL: offer\pip.md
+
+theme: readthedocs
+
+site_author: VIWARR
