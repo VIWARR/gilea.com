@@ -33,16 +33,16 @@ class ComStories(models.Model):
 class Newsroom(models.Model):
     """"CREATE MODEL NEWSROOM"""
     CAT_CHOICES = [
-        ('Данные по ценам', 'price_data'),
-        ('Данные по рынку', 'market_data'),
-        ('Данные по производству', 'production data'),
-        ('Данные по торговле', 'trade data'),
-        ('Без категории', 'without category'),
+        ('price', 'Новости по ценам'),
+        ('market', 'Новости по рынку'),
+        ('production', 'Новости по производству'),
+        ('trade', 'Новости по торговле'),
+        ('without', 'Без категории'),
     ]
 
     title = models.CharField(verbose_name='Заголовок', max_length=300)
     content = models.TextField(verbose_name='Контент', max_length=10000)
-    category = models.CharField(verbose_name='Категория', max_length=25, choices=CAT_CHOICES, default='Без категории')
+    category = models.CharField(verbose_name='Категория', max_length=25, choices=CAT_CHOICES, default='without')
     data_created = models.DateField(verbose_name='Дата создания', auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
