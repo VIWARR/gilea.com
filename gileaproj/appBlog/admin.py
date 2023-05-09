@@ -5,12 +5,6 @@ from django import forms
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 
-class GilDevAdminForm(forms.ModelForm):
-    content = forms.CharField(label='Контент', widget=CKEditorUploadingWidget())
-    class Meta:
-        model = GilDev
-        fields = '__all__'
-
 @admin.register(GilDev)
 class GilDevAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'completion_date')
