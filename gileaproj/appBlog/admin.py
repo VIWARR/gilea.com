@@ -13,12 +13,12 @@ class GilDevAdminForm(forms.ModelForm):
 
 @admin.register(GilDev)
 class GilDevAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content', 'data_created')
+    list_display = ('title', 'content', 'completion_date')
 
 @admin.register(Newsroom)
 class NewsroomAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'category', 'data_created', 'author')
 
 @admin.register(ComStories)
-class ComStoriesAdnmin(admin.ModelAdmin):
+class ComStoriesAdmin(admin.ModelAdmin):
     list_display = ('title', 'stories', 'author')
