@@ -7,8 +7,8 @@ class GilDev(models.Model):
     """"CREATE MODEL GILEA DEVELOPMENT"""
     title = models.CharField(verbose_name='Заголовок', max_length=300)
     content = models.TextField(verbose_name='Контент', max_length=10000)
-    data_created = models.DateField(verbose_name='Дата создания', auto_now_add=True)
     completion_date = models.DateField(verbose_name='Дата окончания')
+    draft = models.BooleanField(verbose_name='Публикация', default=False)
 
     class Meta:
         verbose_name = 'Планы развития GILEA'
@@ -22,6 +22,7 @@ class ComStories(models.Model):
     title = models.CharField(verbose_name='Заголовок', max_length=300)
     stories = models.TextField(verbose_name='История', max_length=10000)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    draft = models.BooleanField(verbose_name='Публикация', default=False)
 
     class Meta:
         verbose_name = 'Истории компаний'
@@ -45,6 +46,7 @@ class Newsroom(models.Model):
     category = models.CharField(verbose_name='Категория', max_length=25, choices=CAT_CHOICES, default='without')
     data_created = models.DateField(verbose_name='Дата создания', auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    draft = models.BooleanField(verbose_name='Публикация', default=False)
 
     class Meta:
         verbose_name = 'Новость'
