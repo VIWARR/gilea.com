@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'debug_toolbar',
 
-    'news.apps.NewsConfig',
+    'appBlog.apps.AppblogConfig',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
