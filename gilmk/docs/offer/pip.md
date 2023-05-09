@@ -38,7 +38,7 @@ pip install django-dotenv
 ***
 
 
-## [django-ckeditor](https://django-ckeditor.readthedocs.io/en/latest/#)
+## [django-ckeditor](https://github.com/django-ckeditor/django-ckeditor/blob/main/README.rst)
 ```bash
 pip install django-ckeditor
 ```
